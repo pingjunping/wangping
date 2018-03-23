@@ -1,0 +1,63 @@
+# include<iostream>
+#include<string>
+using namespace std;
+
+class animal
+
+{
+
+public:
+
+	animal(string N, string n, string a, string y)
+	{
+		color = N;
+		sex = n;
+		age = a;
+		name = y;
+	}
+
+	virtual void speak();
+
+protected:
+
+	string color;
+
+	string sex;
+
+	string age;
+	string name;
+
+};
+class every : public animal
+{
+public:
+	virtual void speak();
+};
+void every::speak()
+
+{
+	int x;
+	cout << "宠物类型猫(1)or狗(2)" << endl;
+
+	cin >> x ;
+
+
+	if (x= 1)
+
+		cout << "主人你好, 汪汪汪" << endl;
+
+	else
+
+		cout << "主人你好, 喵喵喵" << endl;
+
+}
+
+int main()
+
+{
+	animal dog("white","xy","a year","haha") ;
+	dog.speak();
+
+	return 0;
+
+}
